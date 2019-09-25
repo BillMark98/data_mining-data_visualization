@@ -61,13 +61,13 @@ test
 Note the difference between `IFS=";"` and `IFS=;`  the first is set the `IFS` to `;` and  
 the second sets the `IFS` to `null`  and I guess that to print `IFS` will use space to interepret it
 
-####　Miscellaneous problems
+### Miscellaneous problems
 * print single apostrophe in awk  
 > several variants:   
 > `awk '{print "I '\''m good}'`  
 > `awk '{print "I \047m good}'`  
 > `awk -v q="'" '{print "I " q"m good."}'`  
-_How to use $q in the third command? since `'{print "I \$$q m good."}'` wont help_  
+_How to use `$q` in the third command? since `'{print "I \$$q m good."}'` wont help_  
 For the first one, I guess that `'` is used to delimit all characters so that the command within will not  
 be interpreted as a shell command but rather as input to an `awk` command, then the `awk` will self parse  
 the arguments, which is the command , which is the string literal, etc. And `'\''` is like to tell the awk  
