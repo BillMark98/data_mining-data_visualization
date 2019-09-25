@@ -14,7 +14,8 @@ while read -a wordarray; do
         echo $v
         word="${wordarray[i]}"
         # awk -v var="$v" '{out=""; {out=out" "$var}; print out}' ./ExcelFormattedGISTEMPData2TXT.txt > ${word}.txt
-        awk "{print \$$v}" ./ExcelFormattedGISTEMPData2TXT.txt > ${word}.txt
+        # awk "{print \$$v}" ./ExcelFormattedGISTEMPData2TXT.txt > ${word}.txt
+        awk "{print \$($i + 1)}" ./ExcelFormattedGISTEMPData2TXT.txt > ${word}.txt
     done
     let count=count+1
     # [] stands for test condition and must be surrounded by blanks
