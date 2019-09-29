@@ -1,0 +1,9 @@
+awk '{print $2}' ./ExcelFormattedGISTEMPData2TXT.txt > Glob.txt
+awk '{print $1}' ./ExcelFormattedGISTEMPData2TXT.txt > Year.txt
+awk '{print $3}' ./ExcelFormattedGISTEMPData2TXT.txt > NHem.txt
+awk '{print $4}' ./ExcelFormattedGISTEMPData2TXT.txt > SHem.txt
+awk '{print $5}' ./ExcelFormattedGISTEMPData2TXT.txt > 24N90N.txt
+awk '{print $6}' ./ExcelFormattedGISTEMPData2TXT.txt > 24N24S.txt
+awk '{print $7}' ./ExcelFormattedGISTEMPData2TXT.txt > 90S24S.txt
+awk '{print $8}' ./ExcelFormattedGISTEMPData2TXT.txt > 64N90N.txt
+awk '{print $11}' ./ExcelFormattedGISTEMPData2TXT.txt > Equ24N.txt
